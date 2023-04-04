@@ -55,6 +55,17 @@
 $ npm install class-validator class-transformer --save
 ```
 
+8. TypeORM 사용하기 위한 모듈
+   - pg
+   - typeorm
+   - @nestjs/typeorm
+
+```javascript
+$ npm install pg typeorm @nestjs/typeorm --save
+```
+
+참고링크: https://docs.nestjs.com/techniques/database
+
 ### 2. 계발에 대한 계획
 
 - 모듈 단위로 분배(GIS 모듈, User 모듈, 공공데이터 모듈, 에너지 데이터 모듈)
