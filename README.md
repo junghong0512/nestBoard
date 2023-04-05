@@ -66,6 +66,34 @@ $ npm install pg typeorm @nestjs/typeorm --save
 
 참고링크: https://docs.nestjs.com/techniques/database
 
+9. Entity 생성
+
+- board.entity.ts 파일 생성
+
+```javascript
+import { BaseEntity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { BoardStatus } from './board.model';
+
+export class Board extends BaseEntity {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  title: string;
+
+  @Column()
+  description: string;
+
+  @Column()
+  status: BoardStatus;
+}
+```
+
+10. Repository
+    공식문서: https://typeorm.delightful.studio/classes/_repository_repository_.repository.html
+
+- board.repository.ts 파일 생성
+
 ### 2. 계발에 대한 계획
 
 - 모듈 단위로 분배(GIS 모듈, User 모듈, 공공데이터 모듈, 에너지 데이터 모듈)
